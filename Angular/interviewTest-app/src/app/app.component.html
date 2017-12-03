@@ -1,0 +1,36 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="row" style="text-align:center">
+  <div class="col offset-md-1 col-xs-1">
+      <h1 >
+          Welcome to {{ title }}!
+        </h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+      <h2>click a button to show a tooltip: </h2>
+  </div>    
+</div>
+<div id="beforeButtons" in-viewport (inViewportAction)="action($event)">
+
+</div>
+<div id="buttons" class="row" >
+  <div class="col-md-6 col-xs-6">
+     
+     <button id="button1" type="button" class="btn btn-outline-secondary" ngbTooltip={{firstTooltip}} #t="ngbTooltip" triggers="manual" (click)="toggleTooltip($event)">
+          Button1
+        </button> 
+  </div>
+  <div class="col-md-6 col-xs-6">
+      <button id="button2" type="button" class="btn btn-outline-secondary" ngbTooltip={{secondTooltip}} #t2="ngbTooltip" triggers="manual" (click)="toggleTooltip($event)">
+          Button2
+        </button>
+  </div>
+</div>
+
+<div style="margin-top:800px" class="row">
+  Testing Scroll down
+</div>
+
+
+
